@@ -13,8 +13,6 @@ public class VerificationPage {
     public DashboardPage validVerify(DataHelper.VerificationCode code) {
         codeField.setValue(code.getCode());
         verifyButton.click();
-
-
         $("[data-test-id=dashboard]").shouldBe(Condition.visible);
         return new DashboardPage();
     }
