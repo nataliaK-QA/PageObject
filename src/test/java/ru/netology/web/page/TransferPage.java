@@ -33,6 +33,6 @@ public class TransferPage {
     }
 
     public void findErrorMessage(String expectedText) {
-        errorMessage.should(Condition.and("Проверка сообщения об ошибке", Condition.text(expectedText), visible), Duration.ofSeconds(15));
+        errorMessage.should(Condition.and("Проверка сообщения об ошибке", Condition.text(expectedText), Condition.visible), Duration.ofSeconds(15));
     }
 }
